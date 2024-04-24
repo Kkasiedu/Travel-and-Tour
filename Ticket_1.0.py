@@ -99,3 +99,7 @@ def Reservation():
  print("------------------")
  print("1. Make reservation")
  print("2. Check reservation")
+
+ print("changes")
+
+ print("Changes!!!")
