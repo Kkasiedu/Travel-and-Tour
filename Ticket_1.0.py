@@ -99,7 +99,28 @@ def Reservation():
  print("------------------")
  print("1. Make reservation")
  print("2. Check reservation")
+ print("3. Back")
+ print("4. Exit")
+ Res_Choice=input("Enter Choice :")
+ if Res_Choice == '1':
+    Make_Reservation()
+ elif Res_Choice == '2':
+    Check_Reservation()
+ elif Res_Choice == '3':
+    Main_menu()
+ elif Res_Choice() == '4':
+    print("Exiting.......")  
+ else:
+    Reservation()
 
- print("changes")
 
- print("Changes!!!")
+def Make_Reservation():
+   print("Still under construction")
+
+def Check_Reservation():
+   print("Still under construction")
+
+
+
+
+Login_Screen()
