@@ -67,7 +67,10 @@ def Add_Location():
    Location()
 
 def Location():
-   Locations=[]
+   with open("Login.txt", "w")as file:
+     file.write(Locations=[])
+   with open("Login.txt", "r")as file:
+     Locations=file.read()     
    print("----------------")
    print("LOCATION"   )
    print("----------------")
@@ -90,6 +93,7 @@ def Location():
    elif Choose =='5':
      print("Exiting......")
    else :
+    print("Invalid Input")
     Location()
 
 
@@ -111,14 +115,45 @@ def Reservation():
  elif Res_Choice() == '4':
     print("Exiting.......")  
  else:
-    Reservation()
+   print("Invalid Input!!!")
+   Reservation()
+
+
 
 
 def Make_Reservation():
-   print("Still under construction")
+   print("1. Individual/Solo")
+   print("2. Group/Family")
+   print("3. Back")
+   print("4. Main Menu")
+   print("5. Exit")
+   Make_choice=input("Enter Option: ")
+   if Make_choice =='1':
+    with open("Reservations.txt", "w")as file:
+     file.write(Reservations_Solo={})
+    with open("Reservations.txt", "r")as file:
+     Reservations_Solo=file.read()
+   
+   elif Make_choice =='2':
+     with open("Reservations.txt", "w")as file:
+      file.write(Reservations_Grp={})
+     with open("Reservations.txt", "r")as file:
+      Reservations_Grp=file.read()
+   elif Make_choice =='3':
+     Reservation()
+   elif Make_choice =='4':
+     Main_menu()
+   elif Make_choice =='5':
+     print("Exiting....")
+   else:
+     print("Invalid Input")
+     Make_Reservation()
+
+   
 
 def Check_Reservation():
-   print("Still under construction")
+   print("1. Check for Solo")
+   print("2. Check for Group/Family")
 
 
 
